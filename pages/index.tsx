@@ -7,7 +7,6 @@ import questoes from '../pages/api/BDQuestoes'
 import { RootState } from '../store'
 import { setIndice } from '../store/Questao'
 
-
 const Home= () => {
 
   const dispatch = useDispatch()
