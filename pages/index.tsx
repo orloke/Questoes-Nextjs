@@ -62,7 +62,11 @@ const Home= () => {
   }
 
   const proximoPasso = () => {
-    if (proximaQuestao()=== undefined) {
+    const proximoId = proximaQuestao()
+    if (proximoId) {
+      carregarQuestoes(proximoId)
+    }
+    else{
       Router.push({
         pathname:'/resultado',
         query:{
@@ -71,21 +75,15 @@ const Home= () => {
         }
       })
     }
-    else{
-      carregarQuestoes(proximaQuestao())
-    }
   }
   
-  return (
+  return  (
       <Questionario
         questao={questao}
         ultima = {proximaQuestao()===undefined}
         proximoPasso={proximoPasso}
-      />
-
-
-
-  )
+        />       
+        )
 }
 
 export default Home
