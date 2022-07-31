@@ -14,7 +14,7 @@ const Home= () => {
   const [idsQuestao, setIdsQuestao] = useState<number[]>([])
   const [questaoCorreta, setQuestaoCorreta] = useState(0)
   
-  const BASE_URL = 'http://localhost:3000/api'
+  const BASE_URL = 'https://questoes-nextjs.vercel.app/api'
 
   const carregarIdsQuestoes = async () =>{
     const resp = await fetch(`${BASE_URL}/questionario`)
